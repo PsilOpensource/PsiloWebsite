@@ -17,6 +17,17 @@ a {
     transition: color 0.3s ease; /* Smooth hover effect */
 }
 
+.center{
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.center:hover{
+    color:#910e91
+}
+
+
 
 body {
     background: black;
@@ -24,12 +35,13 @@ body {
     font-family: 'Times New Roman', Times, serif;
     text-align: justify;
     padding: 50px;
-    max-width: 800px;
+    
     margin: auto;
     position: relative;
 }
 
 .arti {
+    max-width: 800px;
     background: rgba(0, 0, 0, 0.8); /* Black background with 50% opacity */
     padding:20px;
     margin-bottom: 40px;

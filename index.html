@@ -11,11 +11,20 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body>
+
+    <!-- Centered Toast Notification -->
+
+    <div id="toast" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+        <div
+            class="bg-purple-500 text-white px-6 py-3 rounded-lg shadow-lg text-center transition-opacity duration-500 opacity-100">
+            Text copied to clipboard!
+        </div>
+    </div>
 
     <!-- Fixed Header with Social Links -->
     <header class="social-header">
@@ -29,77 +38,133 @@
     <div class="overlay-image"></div> <!-- Moves infinitely but sways -->
     <div class="overlay-image2"></div> <!-- Moves infinitely but sways -->
 
-    <div class="arti">
-        <h1>PSILO</h1>
-        <div class="logo">
-            <img src="images/psilo.svg" alt="PSILO Logo">
-        </div>
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="arti">
 
-        <h2>A Scientific Perspective</h2>
-        <blockquote class="centered-quote">“Every mushroom is edible, some only once.”</blockquote>
-        <p><strong>Abstract:</strong> This paper presents the conceptual framework and anticipated launch of PSILO, an
-            experimental cryptocurrency themed around mycology. The intent is to create a scientific yet
-            community-driven digital asset with unique NFT representations of documented fungal species.</p>
-        <p><strong>Introduction:</strong> The intersection of decentralized finance and natural sciences is an emerging
-            field, with fungi serving as both a symbolic and literal model of decentralized networks. This document
-            outlines the initial roadmap for PSILO and its NFT ecosystem.</p>
-        <p><strong>Conclusion:</strong> Further updates and technical specifications will be released as development
-            progresses. Stay tuned.</p>
+            <p id="clipBoard" class="center"> CA: <b> 5z9mrDL7N94qxn4UbnRwdz4Wumdx9jPAfDZgFfN1pump </b></p>
 
-        <div class="split-section">
-            <div>
-                <h3>Technical Details</h3>
-                <p>PSILO is being launched on the Solana blockchain, ensuring high-speed transactions and low fees.
-                    NFT integration are currently in progress.</p>
+
+
+
+            <h1 class="text-xl font-semibold mt-4">P$ILO</h1>
+            <div class="logo">
+                <img src="images/psilo.svg" alt="PSILO Logo">
             </div>
-            <div>
-                <h3>Community & Vision</h3>
-                <p>Our goal is to create an engaged community around the intersection of cryptocurrency and mycology.
-                    Join our discussions and contribute to the project’s growth.</p>
+
+            <h2>A Scientific Perspective</h2>
+            <blockquote class="centered-quote">“Every mushroom is edible, some only once.”</blockquote>
+            <p><strong class="text-xl font-semibold mt-4">Abstract:</strong> This paper presents the conceptual
+                framework and anticipated launch of PSILO,
+                an
+                experimental cryptocurrency themed around mycology. The intent is to create a scientific yet
+                community-driven digital asset with unique NFT representations of documented fungal species.</p>
+            <p><strong class="text-xl font-semibold mt-4">Introduction:</strong> The intersection of decentralized
+                finance and natural sciences is an
+                emerging
+                field, with fungi serving as both a symbolic and literal model of decentralized networks. This document
+                outlines the initial roadmap for PSILO and its NFT ecosystem.</p>
+            <p><strong class="text-xl font-semibold mt-4">Conclusion:</strong> Further updates and technical
+                specifications will be released as development
+                progresses. Stay tuned.</p>
+
+            <div class="split-section">
+                <div>
+                    <h3 class="text-xl font-semibold mt-4">Technical Details</h3>
+                    <p>PSILO is being launched on the Solana blockchain, ensuring high-speed transactions and low fees.
+                        NFT integration are currently in progress.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mt-4">Community & Vision</h3>
+                    <p>Our goal is to create an engaged community around the intersection of cryptocurrency and
+                        mycology.
+                        Join our discussions and contribute to the project’s growth.</p>
+                </div>
             </div>
+            <br></br>
+
+            <p><strong class="text-xl font-semibold mt-4">NFT Concept:</strong> The "Mycota" collection consists of 500
+                unique NFTs, each representing a
+                scientifically documented mushroom species. Each NFT will be assigned a rarity classification based on
+                edibility.</p>
+
+            <p><strong class="text-xl font-semibold mt-4"> Total NFTs:</strong> 500 unique mushroom species.</p>
+            <p><strong class="text-xl font-semibold mt-4">Each NFT Name:</strong> Full scientific name (e.g.,
+                <em>Gliophorus graminicolor</em>).</p>
+            <p><strong class="text-xl font-semibold mt-4">Rarity Levels (Edibility Classification):</strong></p>
+            <ul class="space-y-2 text-lg">
+                <li class="flex items-center gap-2 border border-gray-400 rounded-lg p-3">
+                    <span class="mt-1">•</span> <strong class="text-gray-700">Unknown</strong> <span>❓</span>
+                </li>
+                <li class="flex items-center gap-2 border border-red-500 rounded-lg p-3">
+                    <span class="mt-1">•</span> <strong class="text-red-600">Poisonous</strong> <span>☠️</span>
+                </li>
+                <li class="flex items-center gap-2 border border-green-500 rounded-lg p-3">
+                    <span class="mt-1">•</span> <strong class="text-green-600">Edible</strong> <span>🍄</span>
+                </li>
+                <li class="flex items-center gap-2 border border-purple-500 rounded-lg p-3">
+                    <span class="mt-1">•</span> <strong class="text-purple-600">Hallucinogenic</strong> <span>🌈☠️</span>
+                </li>
+            </ul>
+
+            <p class="text-xl font-semibold mt-6">Minting Details:</p>
+            <ul class="list-disc pl-5 space-y-2 text-lg">
+                <li><strong class="">Blockchain:</strong> <span class="">Solana</span></li>
+                <li><strong class="">Mint Price:</strong> <span class="">0.1 SOL</span></li>
+                <li>
+                    <strong class="">Royalties on Sales:</strong>
+                    <span class="">5% Donated to psychedelic research at Johns Hopkins Center for
+                        Psychedelic & Consciousness Research</span>
+                    (<a href="https://secure.jhu.edu/form/hopkinspsychedelic" target="_blank"
+                        class="text-purple-500 underline hover:text-purple-600">Here</a>)
+                </li>
+            </ul>
+
+            <p class="text-xl font-semibold mt-6">NFT Utility & Perks:</p>
+            <ul class="list-disc pl-5 space-y-2 text-lg">
+                <li><strong class="">Exclusive Access</strong> – Holders may gain access to future staking,
+                    governance
+                    participation, or special airdrops.</li>
+                <li><strong class="">Community Involvement</strong> – Possible voting rights for future
+                    ecosystem
+                    decisions.</li>
+                <li><strong class="">Limited Collection</strong> – Only 500 NFTs, ensuring scarcity and
+                    value retention.</li>
+            </ul>
+
+
+
         </div>
-
-
-        <p><strong>NFT Concept:</strong> The "Mycota" collection consists of 500 unique NFTs, each representing a
-            scientifically documented mushroom species. Each NFT will be assigned a rarity classification based on
-            edibility.</p>
-
-        <p><strong>Total NFTs:</strong> 500 unique mushroom species.</p>
-        <p><strong>Each NFT Name:</strong> Full scientific name (e.g., <em>Gliophorus graminicolor</em>).</p>
-        <p><strong>Rarity Levels (Edibility Classification):</strong></p>
-        <ul>
-            <li><strong>Unknown</strong> ❓</li>
-            <li><strong>Poisonous</strong> ☠️</li>
-            <li><strong>Edible</strong> 🍄</li>
-            <li><strong>Hallucinogenic</strong> 🌈☠️</li>
-        </ul>
-
-        <p><strong>Minting Details:</strong></p>
-        <ul>
-            <li><strong>Blockchain:</strong> Solana</li>
-            <li><strong>Mint Price:</strong> 0.1 SOL</li>
-            <li><strong>Royalties on Sales:</strong> 5% Donated to psychedelic research at Johns Hopkins Center for
-                Psychedelic &
-                Consciousness Research (<a href="https://secure.jhu.edu/form/hopkinspsychedelic"
-                    target="_blank">Here</a>)</li>
-        </ul>
-
-        <p><strong>NFT Utility & Perks:</strong></p>
-        <ul>
-            <li><strong>Exclusive Access</strong> – Holders may gain access to future staking, governance participation,
-                or special airdrops.</li>
-            <li><strong>Community Involvement</strong> – Possible voting rights for future ecosystem decisions.</li>
-            <li><strong>Limited Collection</strong> – Only 500 NFTs, ensuring scarcity and value retention.</li>
-        </ul>
-
-
-
     </div>
+
 
     <footer class="footer">
         <p>Disclaimer: PSILO is a memecoin with no inherent financial value. It is purely experimental and should not be
             considered an investment.</p>
     </footer>
+
+
+
+    <script>
+
+        function copyAdress() {
+            navigator.clipboard.writeText("5z9mrDL7N94qxn4UbnRwdz4Wumdx9jPAfDZgFfN1pump")
+        }
+
+        document.getElementById("clipBoard").addEventListener("click", function () {
+            copyAdress();
+            // Show toast notification
+            toast.classList.remove("hidden", "opacity-0");
+            toast.classList.add("opacity-100");
+
+            // Hide the toast after 2 seconds
+            setTimeout(() => {
+                toast.classList.add("opacity-0");
+                setTimeout(() => toast.classList.add("hidden"), 500); // Keep hidden after fade-out
+            }, 2000);
+        });
+
+    </script>
+
 </body>
 
 </html>
