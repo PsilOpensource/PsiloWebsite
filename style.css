@@ -1,3 +1,15 @@
+
+:root {
+    --accent-color: #910e91;  /* Example main accent color */
+    /* var(--accent-color); */
+}
+
+
+::selection {
+    background: var(--primary-color, var(--accent-color)); /* Change this to your preferred color */
+    color: var(--background-color, #000);
+}
+
 body {
     background: black;
     color: white;
@@ -77,6 +89,20 @@ p {
 
 .split-section div {
     width: 48%;
+}
+
+/* Centered quote styling */
+.centered-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+    color: #ddd; /* Subtle contrast */
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 10px 20px;
+    border-left: 4px solid var(--accent-color); /* Left border for styling */
+    background: rgba(255, 255, 255, 0.1); /* Slight background highlight */
+    border-radius: 5px;
 }
 
 
@@ -164,7 +190,7 @@ p {
 }
 
 .social-links a:hover {
-    color: #790297; /* Highlight color */
+    color: var(--accent-color); /* Highlight color */
 }
 
 .footer {
