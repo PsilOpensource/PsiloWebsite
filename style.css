@@ -12,6 +12,7 @@ body {
 .arti {
     background: rgba(0, 0, 0, 0.8); /* Black background with 50% opacity */
     padding:20px;
+    margin-bottom: 40px;
 }
 
 h1 {
@@ -31,6 +32,43 @@ p {
     line-height: 1.6;
 }
 
+
+
+/* Decrease font sizes for tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Further reduce text size for small mobile screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+
+
+
 .split-section {
     display: flex;
     justify-content: space-between;
@@ -48,45 +86,109 @@ p {
         background-position: 0 0;
     }
     100% {
-        background-position: 4816px 5718px; /* Increase for a smoother effect */
+        background-position: 802px 953px; 
     }
 }
 
 @keyframes swayBackground {
-    0%, 100% {
-        transform: translateX(-200px); /* Moves left */
+    0%,100% {
+        transform: translateX(-10%); /* Moves left relative to container width */
     }
     50% {
-        transform: translateX(0px); /* Moves right */
+        transform: translateX(0%); /* Moves left relative to container width */
     }
 }
 
+
+
+
 .overlay-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 100%;
+    background: url('images/seperate1.png') repeat;
+    background-size: 802px 953px; 
+    /* OG  background-position: 4816px 5718px;  */
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: -1;
+    /*animation: moveBackground 3.5s linear infinite;*/
+    /*animation: moveBackground 9s linear infinite;*/
+
+
+    animation: moveBackground 9s linear infinite,
+        swayBackground 6s ease-in-out infinite;
+       /* swayBackground 6s ease-in-out infinite; /* Sways left & right */ /* Adjust duration and timing */
+}
+
+.overlay-image2 {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: url('images/seperate1.png') repeat;
-    background-size: contain;
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: -1;
-    animation: moveBackground 90s linear infinite;
-    /*swayBackground 6s ease-in-out infinite; /* Sways left & right */; /* Adjust duration and timing */
-}
 
-/* Offset alternate tiling */
-.overlay-image::after {
-    content: "";
-    position: absolute;
-    top: 0px; /* Offset vertically */
-    left: 150px; /* Offset horizontally */
-    width: 100%;
-    height: 100%;
-    background: url('images/seperate1.png') repeat;
+    background-position: 200px 0; /* Shift the pattern */
     background-size: contain;
-    opacity: 0.5;
+    background-attachment: fixed; /* Keep consistent alignment */
+    opacity: 0.2;
     pointer-events: none;
     z-index: -2;
+}
+
+
+
+/* Fixed header with social links */
+.social-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Dark background */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #790297; /* Highlight color */
+}
+
+.footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically if needed */
+    margin: 10px auto; /* Adds spacing and ensures it's centered */
+}
+
+.logo img {
+    height: 200px; /* Adjust size as needed */
+    width: auto;
+    filter: invert(1); /* Turns black elements white */
 }

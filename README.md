@@ -8,11 +8,11 @@ PSILO is a decentralized token launched on Solana via Pump.fun, paired with "The
 ## Token Details
 - **Name:** PSILO  
 - **Ticker:** PSILO  
-- **Total Supply:** 10,000,000 PSILO  
+- **Total Supply:** 1,000,000,000 PSILO  
 - **Decimals:** 9 (default for Solana)  
 - **Ownership:** Renounced automatically via Pump.fun  
 - **Developer Allocation:** 0.5% (50,000 PSILO)  
-- **Liquidity:** Set by Pump.fun (1 SOL seed liquidity)  
+- **Liquidity:** Set by Pump.fun + (1 SOL seed liquidity?)  
 - **Token Address:** Randomly assigned (since Pump.fun doesn’t support vanity addresses)  
 
 ---
