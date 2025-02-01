@@ -17,7 +17,7 @@ PSILO is a decentralized token launched on Solana via Pump.fun, paired with "The
 
 ---
 
-## NFT Collection: "The MycoVerse"
+## NFT Collection: "Mycota"
 
 ### NFT Concept
 - **Total NFTs:** 500 unique mushroom species  
